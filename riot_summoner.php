@@ -1,5 +1,6 @@
 ﻿<?php
 
+$test = '';
 $server = 'eune';
 $summoner = 'Helvetesvind';
 
