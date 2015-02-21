@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `champions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table rioti.champions: ~0 rows (approximately)
+-- Dumping data for table rioti.champions: ~5 rows (approximately)
 /*!40000 ALTER TABLE `champions` DISABLE KEYS */;
 INSERT INTO `champions` (`id`, `name`, `title`) VALUES
 	(43, 'Karma', 'the Enlightened One'),
@@ -32,6 +32,23 @@ INSERT INTO `champions` (`id`, `name`, `title`) VALUES
 	(201, 'Braum', 'the Heart of the Freljord'),
 	(412, 'Thresh', 'the Chain Warden');
 /*!40000 ALTER TABLE `champions` ENABLE KEYS */;
+
+
+-- Dumping structure for table rioti.summoners
+CREATE TABLE IF NOT EXISTS `summoners` (
+  `id` bigint(20) unsigned NOT NULL,
+  `name` varchar(16) NOT NULL,
+  `level` int(10) unsigned NOT NULL,
+  `server` varchar(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table rioti.summoners: ~0 rows (approximately)
+/*!40000 ALTER TABLE `summoners` DISABLE KEYS */;
+INSERT INTO `summoners` (`id`, `name`, `level`, `server`) VALUES
+	(19376812, 'what ive done', 30, 'eune'),
+	(21620473, 'Helvetesvind', 30, 'eune');
+/*!40000 ALTER TABLE `summoners` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

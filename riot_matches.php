@@ -15,7 +15,7 @@ foreach ($object['matches'] as $match) {
 	$participant = $match['participants'];
 	$championId = intval($participant[0]['championId']);
         
-        $check = checkChampion($championId);
+        $check = DB::checkCampion($championId);
         $champion = '';
         if ($check) {
             $champion = $check['name'];
@@ -24,7 +24,7 @@ foreach ($object['matches'] as $match) {
             $object = json_decode($res, true);
             $championName = $object['name'];
             $championTtle = $object['title'];
-            saveChampion($championId, $championName, $championTtle);
+            DB::saveChampion($championId, $championName, $championTtle);
             
             $champion = $championName;
         }
